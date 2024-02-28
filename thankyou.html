@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay loop muted>
+            <source src="E:\javascript\newproj\login.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="overlay">
+        <div class="form-container">
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+                <a href="#" class="registration-form-link" onclick="showForm('registration-form')">Don't have an account? Create now!</a><br>
+                <a href="#" class="forgot-password-form-link" onclick="showForm('forgot-password-form')">Forgot Password?</a>
+            </form>
+
+            <form id="registration-form" class="form1">
+                <h2>Register</h2>
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" name="new-username" required>
+
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Register</button>
+                <a href="#" class="login-form" onclick="showForm('login-form')">Already have an account? Login!</a>
+            </form>
+
+            <form id="forgot-password-form" class="form2">
+                <h2>Forgot Password</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Reset Password</button>
+                <a href="#" class="login-form" onclick="showForm('login-form')">Login!</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="scp.js"></script>
+</body>
+</html>
